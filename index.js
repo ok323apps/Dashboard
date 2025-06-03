@@ -1,13 +1,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const axios = require("axios");
-const Redis = require("ioredis");
+//const Redis = require("ioredis");
 const { v4: uuidv4 } = require("uuid");
 
 const app = express();
 app.use(bodyParser.json());
 
-const redis = new Redis(process.env.REDIS_URL);
+//const redis = new Redis(process.env.REDIS_URL);
 const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
 
 const rewriteTitle = async (product) => {
